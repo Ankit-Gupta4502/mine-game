@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,300;1,6..12,400&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -5,6 +9,9 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -27,12 +34,194 @@
 .App-link {
   color: #61dafb;
 }
+.mines {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.stake_btn {
+  border-radius: 5px;
+  background-color: #444444;
+  padding: 10px 10px;
+}
+.play_btn {
+  background: linear-gradient(
+    225deg,
+    #77ffa8 0%,
+    #ffe081 33%,
+    #ffad8e 68%,
+    #a592ff 100%
+  );
 
-@keyframes App-logo-spin {
-  from {
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 17px;
+}
+.start_play_btn {
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-size: 17px;
+  background-color: #444444;
+  color: #bcbcbc;
+}
+
+.play_btn:hover span > svg {
+  animation: shake 0.4s ease-in-out;
+}
+.equal_btn:hover span {
+  animation: shake 0.4s ease-in-out;
+}
+.left_mines {
+  padding: 15px;
+}
+.bg_dark {
+  background-color: rgb(36, 35, 35);
+}
+.right_mines {
+  background-color: rgb(55, 54, 54);
+  padding-inline: 20px 40px;
+}
+.stake {
+  border: 2px solid rgb(68, 68, 68);
+  border-radius: 6px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 10px;
+}
+.refresh_btn {
+  border-radius: 50%;
+  background-color: rgba(20, 20, 20, 0.2);
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+}
+.equal_btn {
+  border-radius: 50%;
+  background-color: rgba(81, 80, 80, 0.2);
+  transform: translateY(-50%);
+  width: 37px;
+  height: 37px;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 10px;
+  padding: 10px;
+}
+.tiles_element {
+  cursor: default;
+  border-width: 2px;
+  border-color: rgb(44, 63, 52);
+  background-size: 500% 500%;
+  background-position: 0% 0%;
+  cursor: pointer;
+  /* background-color: rgb(68, 68, 68); */
+  background: linear-gradient(
+    225deg,
+    #77ffa8 0%,
+    #ffe081 33%,
+    #ffad8e 68%,
+    #a592ff 100%
+  );
+
+  border-radius: 7px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 10px;
+  padding: 10px;
+}
+.tiles_element1 {
+  cursor: default;
+  border: #77ffa8;
+  border-width: 2px;
+  border-color: rgb(74, 150, 106);
+  background-size: 500% 500%;
+  background-position: 0% 0%;
+  cursor: pointer;
+  background-color: rgb(195, 224, 186);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  width: 100%;
+  height: 100px;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+.opactiy-05 {
+  opacity: 0.5;
+}
+.mine {
+  cursor: default;
+  border-width: 2px;
+  border-color: rgb(44, 63, 52);
+  background-size: 500% 500%;
+  background-position: 0% 0%;
+  cursor: pointer;
+  /* background-color: rgb(68, 68, 68); */
+  background-color: red;
+  border-radius: 7px;
+  width: 100%;
+  height: 100px;
+}
+.range_slider {
+  height: 3px;
+}
+.equal_btn {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(68, 68, 68);
+  color: black;
+}
+.equal_btnn {
+  border-radius: 20px;
+  padding: 6px;
+  background-color: white;
+  color: black;
+}
+.tiles_element_play {
+  cursor: default;
+  cursor: pointer;
+  border-width: 2px;
+  border-color: rgb(44, 63, 52);
+  background-size: 500% 500%;
+  background-position: 0% 0%;
+  background-color: rgb(68, 68, 68);
+
+  border-radius: 7px;
+  width: 100%;
+  height: 100px;
+}
+@keyframes shake {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
